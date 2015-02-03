@@ -24,7 +24,7 @@ http://hello1010.com
             return options.inverse(this);
           });
 
-使用方法：
+使用方法
 
     {{#ifCond author.name 'hellojammy'}}
         .....
