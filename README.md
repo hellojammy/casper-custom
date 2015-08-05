@@ -4,7 +4,7 @@ The default theme for [Ghost](http://github.com/tryghost/ghost/).
 
 > 预览地址：
 
-http://hello1010.com
+[hellojammy的博客](http://hello1010.com).
 
 > 新增特性
 
