@@ -1,5 +1,5 @@
 {{!< default}}
-
+<link href="http://cdn.bootcss.com/highlight.js/8.4/styles/xcode.min.css" rel="stylesheet">
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
@@ -53,22 +53,24 @@
                     {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
                 </div>
                 <h3><a href="http://hello1010.com/rewards/" target="_blank">打赏作者</a></h3>
-                {{#ifCond name 'hellojammy'}}
+                {{#ifCond name 'hellojammy_test'}}
                     <div>个人微信号：hellojammy，微信扫一扫添加</div>
                     <img src="http://static.hello1010.com/public/images/qrcode_hellojammy.jpg" alt="个人微信号：hellojammy">
                     <div>个人微信公众号：hellochats，微信扫一扫添加</div>
                     <img src="http://static.hello1010.com/public/images/qrcode_hellochats.jpg" alt="个人微信公众号：hellochats">
                 {{/ifCond}}
             </section>
-
         {{/author}}
-            <section class="share">
-                <h4>分享</h4>
-                {{! 以下代码使用的是百度分享(http://share.baidu.com/)，如需自定义，请自行到百度分享上定制并将代码粘贴到这里。}}
-                <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div>
+        <section class="post-comments">
+            <div class="ds-thread" data-thread-key="{{slug}}" data-title="{{{title}}}" data-url="{{url absolute="true"}}"></div>
+        </section>
+        <section class="share">
+            <h4>分享</h4>
+            {{! 以下代码使用的是百度分享(http://share.baidu.com/)，如需自定义，请自行到百度分享上定制并将代码粘贴到这里。}}
+            <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-                {{! 百度分享代码结束}}
-            </section>
+            {{! 百度分享代码结束}}
+        </section>
 
         </footer>
 
@@ -77,3 +79,17 @@
 </main>
 
 {{/post}}
+
+<script src="http://cdn.bootcss.com/highlight.js/8.4/highlight.min.js"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+<script type="text/javascript">
+    var duoshuoQuery = {short_name:"hello1010"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>

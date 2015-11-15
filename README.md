@@ -14,7 +14,9 @@ http://hello1010.com
 
 3、修改页面底部的显示
 
-4、修改了ghost的node_modules模块中的handlebars，新增了ifCond方法，用来增强handlebars模板引擎的if判断功能，用来比较两个变量是否相等。
+4、新增侧边栏,支持快速回到顶部,二维码显示等功能
+
+5、修改了ghost的node_modules模块中的handlebars，新增了ifCond方法，用来增强handlebars模板引擎的if判断功能，用来比较两个变量是否相等。
 主要代码如下：
 
     instance.registerHelper('ifCond', function(v1, v2, options) {

@@ -1,0 +1,40 @@
+<div class="slider-op">
+    <a style="display: none;" id="backtop-wrapper" href="javascript:void(0);" title="返回顶部" class="backtop-wrapper">
+        <i class="backtop"></i>
+    </a>
+    <a id="feedback-wrapper" href="http://hello1010.com/feedback/" title="反馈" target="_blank" class="feedback-wrapper">
+        <i class="feedback"></i>
+    </a>
+    <a id="towcode-wrapper" href="javascript:void(0);" class="towcode-wrapper">
+        <i class="towcode"></i>
+        <div class="img-wrapper">
+            <p>在线记录你的碎片想法（图片，文字）。其实我还是一个聊天机器人。</p>
+            <p>ʕ•̫͡•ʕ̫͡ʕ•͓͡•ʔ-̫͡-ʕ•̫͡•ʔ̫͡ʔ-̫͡-ʔ</p>
+            <div class="qr-code qr-hellochats">
+            </div>
+            <p class="scan-tips">微信扫一扫关注公众号</p>
+        </div>
+    </a>
+</div>
+
+<script type="application/javascript">
+    $('#towcode-wrapper').mouseover(function() {
+        $(this).find('.img-wrapper').show();
+    }).mouseout(function() {
+        $(this).find('.img-wrapper').hide();
+    });
+
+    var $backToTopEle = $('#backtop-wrapper'),
+            $backToTopFun = function () {
+                var st = $(document).scrollTop(), winh = $(window).height();
+                (st > 0) ? $backToTopEle.show() : $backToTopEle.hide();
+                //for IE6
+                if (!window.XMLHttpRequest) {
+                    $backToTopEle.css("top", st + winh - 166);
+                }
+            };
+    $(window).bind("scroll", $backToTopFun);
+    $('#backtop-wrapper').click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 120);
+    });
+</script>
