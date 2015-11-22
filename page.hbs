@@ -29,7 +29,22 @@
         </section>
     </article>
 </main>
-
+<script>
+    _hmt.push(['_trackEvent', 'page_view', 'hellojammy-page', '{{title}}']);
+    _hmt.push(['_trackOrder', {
+        "orderId": "{{slug}}",
+        "orderTotal": 0,
+        "item": [
+            {
+                "skuId": "{{slug}}",
+                "skuName": "{{title}}",
+                "category": "hellojammy-page",
+                "Price": 0,
+                "Quantity": 1
+            }
+        ]}
+    ]);
+</script>
 {{/post}}
 <script type="text/javascript">
     var duoshuoQuery = {short_name:"hello1010"};

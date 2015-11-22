@@ -53,6 +53,7 @@
                     {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
                 </div>
                 <h3><a href="http://hello1010.com/rewards/" target="_blank">打赏作者</a></h3>
+                <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=eeeba45ca58ef89bd5f528eebd48d287010204522f428fa6c748eac20f162288"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="全栈技术交流群" title="全栈技术交流群">&nbsp;&nbsp;&nbsp;加入全栈技术交流群&nbsp;&nbsp;</a>
                 {{#ifCond name 'hellojammy_test'}}
                     <div>个人微信号：hellojammy，微信扫一扫添加</div>
                     <img src="http://static.hello1010.com/public/images/qrcode_hellojammy.jpg" alt="个人微信号：hellojammy">
@@ -77,7 +78,22 @@
     </article>
 
 </main>
-
+<script>
+    _hmt.push(['_trackEvent', 'page_view', 'hellojammy-post', '{{title}}']);
+    _hmt.push(['_trackOrder', {
+        "orderId": "{{slug}}",
+        "orderTotal": 0,
+        "item": [
+            {
+                "skuId": "{{slug}}",
+                "skuName": "{{title}}",
+                "category": "hellojammy-post",
+                "Price": 0,
+                "Quantity": 1
+            }
+        ]}
+    ]);
+</script>
 {{/post}}
 
 <script src="http://cdn.bootcss.com/highlight.js/8.4/highlight.min.js"></script>
